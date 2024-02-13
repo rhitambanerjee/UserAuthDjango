@@ -1,0 +1,23 @@
+{% extends 'main/header.html' %}
+
+  {% block content %}
+
+   
+        {% if user.is_authenticated %}
+        
+        <div class="container mt-5" >
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="card text-center">
+                <div class="card-body d-flex flex-column justify-content-center" style="min-height: 50vh;">
+                  <h5 class="card-title">Welcome, <a href="/profile">{{ user.username }}</a></h5>
+                  <div><a href="/logout" class="btn btn-dark">Logout</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+  
+        {% endif %}
+  {% endblock %}
